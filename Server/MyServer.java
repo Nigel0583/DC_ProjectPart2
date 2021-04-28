@@ -22,6 +22,9 @@ public class MyServer extends LOGPROGServer
 	}
  	// override the echo_1 method from the stub – where it does nothing
 	public String Login1(String a) {
+	    if(a.equals("leave*")){
+            System.out.println("You have logged out");
+        }
         System.out.println(a +" has logged in");
         try (PrintWriter out = new PrintWriter(a+".txt")) {
             out.println(a);
